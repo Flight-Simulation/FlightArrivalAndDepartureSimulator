@@ -49,19 +49,7 @@ public class SystemClock extends Observable implements Runnable, ActionListener 
 		
 		sdf = new SimpleDateFormat("HH:mm:ss");
 		updateTime();
-		
-		try {
-			String filename="D:/Extracted Files/digital_7/digital-7 (mono).ttf";
-			font = Font.createFont(Font.TRUETYPE_FONT, new File(filename));
-			font = font.deriveFont(Font.PLAIN,40);
-
-			GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-			ge.registerFont(font);
-		}
-		catch(Exception e) {
-			System.out.println("Clock font exception thrown:: IOException");
-		}
-
+	
 	}
 
 	private void updateTime() {
@@ -89,7 +77,7 @@ public class SystemClock extends Observable implements Runnable, ActionListener 
 		dateTime.setMinutes(minutes);
 		dateTime.setSeconds(seconds);
 		timeLabel.setText(sdf.format(dateTime));
-		timeLabel.setFont(font);
+		timeLabel.setFont(new Font("SansSerif", Font.PLAIN, 40));
 				
 	}
 
