@@ -77,7 +77,7 @@ public class SystemClock extends Observable implements Runnable, ActionListener 
 		dateTime.setMinutes(minutes);
 		dateTime.setSeconds(seconds);
 		timeLabel.setText(sdf.format(dateTime));
-		timeLabel.setFont(new Font("SansSerif", Font.PLAIN, 40));
+		timeLabel.setFont(new Font("SansSerif", Font.PLAIN, 35));
 				
 	}
 
